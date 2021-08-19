@@ -4,3 +4,23 @@
  * This is a general purpose Gradle build.
  * Learn more about Gradle by exploring our samples at https://docs.gradle.org/6.8/samples
  */
+
+plugins {
+    id 'io.micronaut.library' version '2.0.3'
+}
+
+version "0.1"
+group "de.debuglevel.micronauttestlibrary"
+
+repositories {
+    mavenCentral()
+}
+
+micronaut {
+    version = "2.5.3"
+}
+
+dependencies {
+    testImplementation("io.micronaut.test:micronaut-test-junit5")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+}
